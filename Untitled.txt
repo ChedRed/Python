@@ -1,0 +1,29 @@
+/opt/homebrew/lib/python3.12/site-packages/keras/src/layers/reshaping/flatten.py:37: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ flatten (Flatten)                    │ (None, 784)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 16)                  │          12,560 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 16)                  │             272 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 12,832 (50.12 KB)
+ Trainable params: 12,832 (50.12 KB)
+ Non-trainable params: 0 (0.00 B)
+Traceback (most recent call last):
+  File "/Users/ryanchou/Desktop/None/CodingRelatedFiles/Python/aimodel.py", line 47, in <module>
+    test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=2)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/opt/homebrew/lib/python3.12/site-packages/keras/src/trainers/data_adapters/data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 60000
+'y' sizes: 10000
+
+
+⏵ Task `python3.12 /Users/ryanchou/Desktop/None/CodingRelatedFiles/Python/aimodel.py` finished with non-zero error code: 1
+⏵ Command: '/bin/zsh -i -c `python3.12 /Users/ryanchou/Desktop/None/CodingRelatedFiles/Python/aimodel.py`'
