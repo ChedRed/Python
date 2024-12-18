@@ -65,7 +65,7 @@ while True:
 
         broke = False
         for i in range(len(questions[current])):
-            if questions[current][i] == "___":
+            if questions[current][i][0:3] == "___":
                 broke = True
                 break
         if not broke:
